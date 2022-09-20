@@ -83,8 +83,35 @@ public class RequestHandler extends Thread {
 		 * (4) Write the web server's response to a cache file, put the request URL and cache file name to the cache Map
 		 * (5) close file, and sockets.
 		*/
-		
-	}
+                
+                
+		try{
+                    String sentence;
+                    String modifiedSentence;
+                    
+                    BufferedReader inFromUser = new BufferedReader(new InputStreamReader(System.in));
+                    
+                    Socket clientSocket = new Socket("hostname", "1234");
+                    
+                    DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
+                    
+                    BufferedReader inFromServer = new BufferedREader(new InputStreamReader(clientSocket.getInputStream()));
+                    
+                    sentence = inFromUser.readLine();
+                    
+                    outToServer.writeBytes(sentence + "/n");
+                    
+                    modifiedSentence = inFromServer.readLine();
+                    
+                    System.out.println("FROM SERVER: " + modifiedSentence);
+                    
+                    clientSocket.close();
+                    
+                } catch(IOException ex){
+                    
+                }
+                
+	}      
 	
 	
 	
