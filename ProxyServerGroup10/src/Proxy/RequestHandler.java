@@ -63,11 +63,6 @@ public class RequestHandler extends Thread {
 	
 	private void proxyServertoClient(byte[] clientRequest) {
 
-		FileOutputStream fileWriter = null;
-		Socket toWebServerSocket = null;
-		InputStream inFromServer;
-		OutputStream outToServer;
-		
 		// Create Buffered output stream to write to cached copy of file
 		String fileName = "cached/" + generateRandomFileName() + ".dat";
 		
@@ -86,26 +81,27 @@ public class RequestHandler extends Thread {
                 
                 
 		try{
-                    String sentence;
-                    String modifiedSentence;
-                    
+                    FileOutputStream fileWriter = null;
+                                        
                     BufferedReader inFromUser = new BufferedReader(new InputStreamReader(System.in));
                     
-                    Socket clientSocket = new Socket("hostname", "1234");
+                    Socket toWebServerSocket = new Socket("hostname", 1234);
                     
                     DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
                     
-                    BufferedReader inFromServer = new BufferedREader(new InputStreamReader(clientSocket.getInputStream()));
                     
-                    sentence = inFromUser.readLine();
+                    //InputStream inFromServer = (new InputStream(clientSocket.getInputStream()));
+                    //change clientREquest to something idk
+                    outToServer.writeByte(clientRequest);
                     
-                    outToServer.writeBytes(sentence + "/n");
+                    //change to until server stops sending responses
+                    while(true){
+                        //write to cache file
+                    }
+                    toWebServerSocket.close();
                     
-                    modifiedSentence = inFromServer.readLine();
                     
-                    System.out.println("FROM SERVER: " + modifiedSentence);
                     
-                    clientSocket.close();
                     
                 } catch(IOException ex){
                     

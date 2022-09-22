@@ -53,25 +53,27 @@ public class ProxyServer {
 			 *
 		*/
  
-                
             try {
                 ServerSocket server;
-                String clientSentence;
-                String capitalizedSentence;
+                DataOutputStream os;
+                DataInputStream is;
                 server = new ServerSocket (1234);
 
                 while(true){
-                    Socket connectionSocket = server.accept();
+                    Socket client = server.accept();
+                    is = new DataInputStream (client.getInputStream());
+                    os = new DataOutputStream(client.getOutputStream());
                     
-                    BufferedReader inFromClient = 
-                            new BufferedReader(new InputStreamReader
-                            (connectionSocket.getInputStream()));
-                    DataOutputStream outToClient = new DataOutputStream
-                            (connectionSocket.getOutputStream());
-                    clientSentence = inFromClient.readLine();
-                    capitalizedSentence = clientSentence.toUpperCase() + "/n";
+                    //create thread something like below idk
+                    TaskClass task = new TaskClass();
+                    Thread thread = new Thread(task);
+                    thread.start();
+                            
                     
-                    outToClient.writeBytes(capitalizedSentence);
+                    String line = is.readLine();
+                    os.writeBytes("Hello\n");
+                    
+                    client.close();
                 }
                 
             } 
