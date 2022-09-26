@@ -57,6 +57,34 @@ public class RequestHandler extends Thread {
 			 * (4) Otherwise, call method proxyServertoClient to process the GET request
 			 *
 		*/
+                
+                //Check the request type, only process GET request and ignore others
+                //if(((HttpServletRequest) request).getMethod()){
+                try{
+                String urlString = inFromClient.toString();
+                URL url = new URL(urlString);
+                HttpURLConnection con = (HttpURLConnection) url.openConnection();
+                con.setRequestMethod("GET");
+
+                //write log Browser IP URL 
+                //CHANGE: IP AND URL
+                server.writeLog("192.0.0.0" + urlString);
+                //if cahced respond with chached content
+                //idk if this works
+                if(server.getCache(urlString)!=null){
+                byte[] temp = new byte[1024];
+                temp = (server.getCache(urlString)).getBytes();
+                outToClient.write(temp);
+                }
+                //if not call proxyServerToClient to process GET request
+                //might have to change request var
+                proxyServertoClient(request);
+                }
+                catch(Exception ex){
+                    
+                }
+                
+                
 
 	}
 
@@ -81,24 +109,20 @@ public class RequestHandler extends Thread {
                 
                 
 		try{
-                    FileOutputStream fileWriter = null;
-                                        
-                    BufferedReader inFromUser = new BufferedReader(new InputStreamReader(System.in));
                     
                     Socket toWebServerSocket = new Socket("hostname", 1234);
                     
                     DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
                     
+                    //send client request use clientRequest
                     
-                    //InputStream inFromServer = (new InputStream(clientSocket.getInputStream()));
-                    //change clientREquest to something idk
-                    outToServer.writeByte(clientRequest);
+                    //while loop to listen for response
                     
-                    //change to until server stops sending responses
-                    while(true){
-                        //write to cache file
-                    }
+                    //write response to cache file
+                    
+                    //close file/socket
                     toWebServerSocket.close();
+                    
                     
                     
                     

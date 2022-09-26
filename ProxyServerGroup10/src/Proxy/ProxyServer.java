@@ -29,7 +29,7 @@ public class ProxyServer {
 	
 	ServerSocket proxySocket;
 
-	String logFileName = "log.txt";
+	String logFileName = "proxy.log.txt";
 
 	public static void main(String[] args) {
 		new ProxyServer().startServer(Integer.parseInt(args[0]));
@@ -64,13 +64,10 @@ public class ProxyServer {
                     is = new DataInputStream (client.getInputStream());
                     os = new DataOutputStream(client.getOutputStream());
                     
-                    //create thread something like below idk
-                    TaskClass task = new TaskClass();
-                    Thread thread = new Thread(task);
-                    thread.start();
-                            
                     
-                    String line = is.readLine();
+                    RequestHandler newHandler = new RequestHandler(client, this);
+                    
+                    //change this
                     os.writeBytes("Hello\n");
                     
                     client.close();
@@ -93,13 +90,24 @@ public class ProxyServer {
 	}
 
 	public synchronized void writeLog(String info) {
-		
+
 			/**
 			 * To do
 			 * write string (info) to the log file, and add the current time stamp 
 			 * e.g. String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
 			 *
 			*/
+                        try{
+                        FileWriter logFileWriter = new FileWriter("proxy.log");
+                        String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+                        
+                        logFileWriter.write(timeStamp + info);
+                        logFileWriter.close();
+                        
+                        }
+                        catch(IOException ex){
+                            
+                        }
 	}
 
 }
