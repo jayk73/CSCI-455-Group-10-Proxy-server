@@ -1,6 +1,7 @@
 package Proxy;
 
 import java.io.BufferedReader;
+import java.util.logging.FileHandler;
 import java.io.BufferedWriter;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -23,6 +24,7 @@ import java.util.logging.Logger;
 
 
 public class ProxyServer {
+    
 
 	//cache is a Map: the key is the URL and the value is the file name of the file that stores the cached content
 	Map<String, String> cache;
@@ -30,15 +32,17 @@ public class ProxyServer {
 	ServerSocket proxySocket;
 
 	String logFileName = "proxy.log.txt";
+        FileWriter logFileWriter;
+        BufferedWriter bw;
+        
 
 	public static void main(String[] args) {
-		new ProxyServer().startServer(Integer.parseInt(args[0]));
+		new ProxyServer().startServer(Integer.parseInt("1234"));
 	}
 
 	void startServer(int proxyPort) {
 
 		cache = new ConcurrentHashMap<>();
-
 		// create the directory to store cached files. 
 		File cacheDir = new File("cached");
 		if (!cacheDir.exists() || (cacheDir.exists() && !cacheDir.isDirectory())) {
@@ -52,24 +56,27 @@ public class ProxyServer {
 			 * remember to catch Exceptions!
 			 *
 		*/
- 
+                System.out.println("starting server");
             try {
-                ServerSocket server;
+                
                 DataOutputStream os;
                 DataInputStream is;
-                server = new ServerSocket (1234);
+                ServerSocket server = new ServerSocket (1234);
 
                 while(true){
                     Socket client = server.accept();
                     is = new DataInputStream (client.getInputStream());
                     os = new DataOutputStream(client.getOutputStream());
                     
-                    
                     RequestHandler newHandler = new RequestHandler(client, this);
+                    System.out.println("created new thread");
+                    newHandler.run();
                     
                     //change this
-                    os.writeBytes("Hello\n");
-                    
+                    //String line = is.readLine();
+                    //os.writeBytes("Hello\n");
+                    is.close();
+                    os.close();
                     client.close();
                 }
                 
@@ -89,7 +96,7 @@ public class ProxyServer {
 		cache.put(hashcode, fileName);
 	}
 
-	public synchronized void writeLog(String info) {
+	public synchronized void writeLog(String info) throws IOException {
 
 			/**
 			 * To do
@@ -97,17 +104,19 @@ public class ProxyServer {
 			 * e.g. String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
 			 *
 			*/
-                        try{
-                        FileWriter logFileWriter = new FileWriter("proxy.log");
+                        
+                        System.out.println("writing log");
+                       
+                        logFileWriter = new FileWriter(logFileName, true);
+                        bw = new BufferedWriter(logFileWriter);
                         String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
                         
-                        logFileWriter.write(timeStamp + info);
-                        logFileWriter.close();
-                        
-                        }
-                        catch(IOException ex){
-                            
-                        }
+                        bw.write( timeStamp + " "+ info + "\n");
+                        bw.newLine();
+                        bw.close();
+                        System.out.println(timeStamp + " "+ info );
+                        //System.out.println("finished writing log");
+                                              
 	}
 
 }

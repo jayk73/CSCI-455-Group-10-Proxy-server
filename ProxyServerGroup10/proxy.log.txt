@@ -1,0 +1,410 @@
+2022.09.27.16.42.54 192.0.0.0java.net.Socket$SocketInputStream@1f17ae12
+
+2022.09.27.16.42.57 192.0.0.0java.net.Socket$SocketInputStream@cac736f
+
+2022.09.27.16.43.00 192.0.0.0java.net.Socket$SocketInputStream@156643d4
+
+2022.09.27.16.43.03 192.0.0.0java.net.Socket$SocketInputStream@7de26db8
+
+2022.09.27.16.43.06 192.0.0.0java.net.Socket$SocketInputStream@36aa7bc2
+
+2022.09.27.16.43.09 192.0.0.0java.net.Socket$SocketInputStream@182decdb
+
+2022.09.27.16.43.12 192.0.0.0java.net.Socket$SocketInputStream@4361bd48
+
+2022.09.27.16.43.15 192.0.0.0java.net.Socket$SocketInputStream@2401f4c3
+
+2022.09.27.16.43.18 192.0.0.0java.net.Socket$SocketInputStream@4926097b
+
+2022.09.27.16.43.21 192.0.0.0java.net.Socket$SocketInputStream@5d22bbb7
+
+2022.09.27.16.43.24 192.0.0.0java.net.Socket$SocketInputStream@3830f1c0
+
+2022.09.27.16.43.27 192.0.0.0java.net.Socket$SocketInputStream@71dac704
+
+2022.09.27.16.43.30 192.0.0.0java.net.Socket$SocketInputStream@2d363fb3
+
+2022.09.27.16.43.33 192.0.0.0java.net.Socket$SocketInputStream@5aaa6d82
+
+2022.09.27.16.43.36 192.0.0.0java.net.Socket$SocketInputStream@6f75e721
+
+2022.09.27.16.43.39 192.0.0.0java.net.Socket$SocketInputStream@5ccd43c2
+
+2022.09.27.16.43.42 192.0.0.0java.net.Socket$SocketInputStream@5c8da962
+
+2022.09.27.16.43.45 192.0.0.0java.net.Socket$SocketInputStream@2c13da15
+
+2022.09.27.16.43.48 192.0.0.0java.net.Socket$SocketInputStream@368239c8
+
+2022.09.27.16.43.51 192.0.0.0java.net.Socket$SocketInputStream@3b192d32
+
+2022.09.27.16.43.54 192.0.0.0java.net.Socket$SocketInputStream@311d617d
+
+2022.09.27.16.43.57 192.0.0.0java.net.Socket$SocketInputStream@ed17bee
+
+2022.09.27.16.44.00 192.0.0.0java.net.Socket$SocketInputStream@707f7052
+
+2022.09.27.16.44.03 192.0.0.0java.net.Socket$SocketInputStream@14899482
+
+2022.09.27.16.44.03 192.0.0.0java.net.Socket$SocketInputStream@2aae9190
+
+2022.09.27.16.44.06 192.0.0.0java.net.Socket$SocketInputStream@77468bd9
+
+2022.09.27.16.44.09 192.0.0.0java.net.Socket$SocketInputStream@4cc77c2e
+
+2022.09.27.16.44.12 192.0.0.0java.net.Socket$SocketInputStream@39a054a5
+
+2022.09.27.16.44.15 192.0.0.0java.net.Socket$SocketInputStream@6ed3ef1
+
+2022.09.27.16.44.18 192.0.0.0java.net.Socket$SocketInputStream@1f89ab83
+
+2022.09.27.16.44.21 192.0.0.0java.net.Socket$SocketInputStream@61064425
+
+2022.09.27.16.44.24 192.0.0.0java.net.Socket$SocketInputStream@299a06ac
+
+2022.09.27.16.44.27 192.0.0.0java.net.Socket$SocketInputStream@6bc168e5
+
+2022.09.27.16.44.30 192.0.0.0java.net.Socket$SocketInputStream@2e5c649
+
+2022.09.27.16.44.33 192.0.0.0java.net.Socket$SocketInputStream@7382f612
+
+2022.09.27.16.44.36 192.0.0.0java.net.Socket$SocketInputStream@3caeaf62
+
+2022.09.27.16.44.39 192.0.0.0java.net.Socket$SocketInputStream@6a38e57f
+
+2022.09.27.16.44.42 192.0.0.0java.net.Socket$SocketInputStream@1c6b6478
+
+2022.09.27.16.44.45 192.0.0.0java.net.Socket$SocketInputStream@4ac68d3e
+
+2022.09.27.17.23.14 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.15 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.15 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.15 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.15 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.15 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.15 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.15 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.15 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.15 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.18 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.18 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.18 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.18 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.18 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.18 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.18 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.18 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.18 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.18 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.21 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.21 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.21 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.21 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.21 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.21 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.21 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.21 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.21 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.21 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.24 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.24 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.24 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.24 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.24 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.24 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.24 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.24 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.24 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.24 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.27 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.27 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.27 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.27 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.27 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.27 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.27 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.27 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.27 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.27 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.30 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.30 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.30 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.30 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.30 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.30 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.30 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.30 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.30 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.30 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.33 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.33 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.33 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.33 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.33 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.33 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.33 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.33 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.33 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.33 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.36 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.36 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.36 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.36 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.36 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.36 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.36 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.36 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.36 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.36 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.39 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.39 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.39 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.39 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.39 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.39 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.39 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.39 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.39 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.39 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.42 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.42 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.42 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.42 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.42 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.42 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.42 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.42 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.42 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.42 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.42 192.0.0.0POST http://ocsp.pki.goog/gts1c3 HTTP/1.1
+
+2022.09.27.17.23.42 192.0.0.0POST http://ocsp.pki.goog/gts1c3 HTTP/1.1
+
+2022.09.27.17.23.42 192.0.0.0POST http://ocsp.pki.goog/gts1c3 HTTP/1.1
+
+2022.09.27.17.23.42 192.0.0.0POST http://ocsp.pki.goog/gts1c3 HTTP/1.1
+
+2022.09.27.17.23.43 192.0.0.0POST http://ocsp.pki.goog/gts1c3 HTTP/1.1
+
+2022.09.27.17.23.43 192.0.0.0POST http://ocsp.pki.goog/gts1c3 HTTP/1.1
+
+2022.09.27.17.23.43 192.0.0.0POST http://ocsp.pki.goog/gts1c3 HTTP/1.1
+
+2022.09.27.17.23.43 192.0.0.0POST http://ocsp.pki.goog/gts1c3 HTTP/1.1
+
+2022.09.27.17.23.43 192.0.0.0POST http://ocsp.pki.goog/gts1c3 HTTP/1.1
+
+2022.09.27.17.23.43 192.0.0.0POST http://ocsp.pki.goog/gts1c3 HTTP/1.1
+
+2022.09.27.17.23.43 192.0.0.0POST http://ocsp.pki.goog/gts1c3 HTTP/1.1
+
+2022.09.27.17.23.43 192.0.0.0POST http://ocsp.pki.goog/gts1c3 HTTP/1.1
+
+2022.09.27.17.23.43 192.0.0.0POST http://ocsp.pki.goog/gts1c3 HTTP/1.1
+
+2022.09.27.17.23.43 192.0.0.0POST http://ocsp.pki.goog/gts1c3 HTTP/1.1
+
+2022.09.27.17.23.44 192.0.0.0POST http://ocsp.pki.goog/gts1c3 HTTP/1.1
+
+2022.09.27.17.23.44 192.0.0.0POST http://ocsp.pki.goog/gts1c3 HTTP/1.1
+
+2022.09.27.17.23.45 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.45 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.45 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.45 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.45 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.45 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.45 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.45 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.45 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.45 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.48 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.48 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.48 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.48 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.48 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.48 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.48 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.48 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.48 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.48 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.51 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.51 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.51 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.51 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.51 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.51 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.51 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.51 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.51 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.51 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.54 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.54 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.54 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.54 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.54 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.54 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.54 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.54 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.54 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.54 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.57 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.57 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.57 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.57 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.57 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.57 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.57 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.57 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.57 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
+2022.09.27.17.23.57 192.0.0.0GET http://detectportal.firefox.com/canonical.html HTTP/1.1
+
