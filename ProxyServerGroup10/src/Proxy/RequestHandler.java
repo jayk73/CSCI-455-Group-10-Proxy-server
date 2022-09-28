@@ -19,7 +19,9 @@ public class RequestHandler extends Thread {
 	BufferedWriter outToClient;
 	
 	byte[] request = new byte[1024];
-
+        
+        FileWriter writer;
+        BufferedWriter bw;
 	
 	private ProxyServer server;
 
@@ -65,7 +67,7 @@ public class RequestHandler extends Thread {
                     System.out.println("request: " + request);
                     
                     //write log Browser IP URL 
-                    server.writeLog("192.0.0.0" + request);
+                    server.writeLog(clientSocket.getInetAddress().getHostAddress() + " " + request.substring(4));
 
                     //if cahced respond with chached content
                     if(server.getCache(request)!=null){
@@ -77,6 +79,7 @@ public class RequestHandler extends Thread {
                         //might have to change the request var
                         proxyServertoClient(request.getBytes());
                         }
+                    
                     }
                 catch(Exception ex){
                     
@@ -128,9 +131,9 @@ public class RequestHandler extends Thread {
                     
                     
                     //write response to cache file
-                    File newFile = new File(fileName);
-                    FileWriter writer = new FileWriter(fileName);
-                    writer.write(response);
+                    
+                    writer = new FileWriter(fileName);
+                    bw = new BufferedWriter(writer);
                     server.putCache(clientRequest.toString(), fileName);
                     //close file/socket
                     toWebServerSocket.close();

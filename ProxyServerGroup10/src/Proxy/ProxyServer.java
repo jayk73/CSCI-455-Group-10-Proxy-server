@@ -37,7 +37,7 @@ public class ProxyServer {
         
 
 	public static void main(String[] args) {
-		new ProxyServer().startServer(Integer.parseInt("1234"));
+		new ProxyServer().startServer(1234);
 	}
 
 	void startServer(int proxyPort) {
@@ -61,10 +61,10 @@ public class ProxyServer {
                 
                 DataOutputStream os;
                 DataInputStream is;
-                ServerSocket server = new ServerSocket (1234);
+                proxySocket = new ServerSocket (1234);
 
                 while(true){
-                    Socket client = server.accept();
+                    Socket client = proxySocket.accept();
                     is = new DataInputStream (client.getInputStream());
                     os = new DataOutputStream(client.getOutputStream());
                     
@@ -77,6 +77,7 @@ public class ProxyServer {
                     //os.writeBytes("Hello\n");
                     is.close();
                     os.close();
+                    proxySocket.close();
                     client.close();
                 }
                 
