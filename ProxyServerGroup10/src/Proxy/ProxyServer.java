@@ -67,6 +67,7 @@ public class ProxyServer {
                     System.out.println("created new thread");
                     newHandler.run();
                     
+                    
                     client.close();
                 }
                 

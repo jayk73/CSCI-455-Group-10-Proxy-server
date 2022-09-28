@@ -2,6 +2,7 @@ package Proxy;
 
 import java.io.*;
 import java.net.*;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.security.MessageDigest;
@@ -64,15 +65,22 @@ public class RequestHandler extends Thread {
                 System.out.println("Processing GET");
                 try{
                     
-                    inFromClient.read(request); 
-                    String requestString = request.toString();
+                    inFromClient.read(request);
+//                    for(int i = 0; i < request.length; i ++){
+//                        System.out.print(request[i] + " " );
+//                    }
+                    
+                    String requestString = new String(request, StandardCharsets.UTF_8);
+                    String[] URL = requestString.split(" HTTP");
+                    requestString = URL[0];
+                    
                     System.out.println("request: " + requestString);
                     
                     //write log Browser IP URL 
                     server.writeLog(clientSocket.getInetAddress().getHostAddress() + " " + requestString.substring(4));
 
                     //if cahced respond with chached content
-                    if(server.getCache(requestString)!=null){
+                    if(server.getCache(requestString.substring(4))!=null){
                         System.out.println("sending cached content to client");
                         sendCachedInfoToClient(server.getCache(requestString));
                     }
@@ -81,7 +89,7 @@ public class RequestHandler extends Thread {
                         //might have to change the request var
                         proxyServertoClient(request);
                         }
-                    
+                    inFromClient.close();
                     }
                 catch(Exception ex){
                     
@@ -112,12 +120,19 @@ public class RequestHandler extends Thread {
                 
                 System.out.println("Sending request to webserver");
 		try{
+                    
                     //send client request use clientRequest
-                    Socket toWebServerSocket = new Socket(clientRequest.toString(), 80);
+                    String requestString = new String(clientRequest, StandardCharsets.UTF_8);
+                    String[] URL = requestString.split(" HTTP");
+                    requestString = URL[0];
+                    System.out.println("URL: " + requestString.substring(4));
+                    
+                    Socket toWebServerSocket = new Socket(requestString.substring(4), 80);
+                    System.out.println("Past Socket");
                     toWebServerSocket.getOutputStream().write(clientRequest);
                     //loop for response
                     byte[] res;
-                    toWebServerSocket.getInputStream().read(clientRequest);
+                    //toWebServerSocket.getInputStream().read(clientRequest);
                     while((res = clientRequest)!= null){
                         outToClient.write(res);
                         //System.out.println("stuck");
