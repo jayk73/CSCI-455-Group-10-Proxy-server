@@ -33,11 +33,10 @@ public class ProxyServer {
 
 	String logFileName = "proxy.log.txt";
         FileWriter logFileWriter;
-        BufferedWriter bw;
-        
+        BufferedWriter bw;;        
 
 	public static void main(String[] args) {
-		new ProxyServer().startServer(1234);
+		new ProxyServer().startServer(6969);
 	}
 
 	void startServer(int proxyPort) {
@@ -59,25 +58,15 @@ public class ProxyServer {
                 System.out.println("starting server");
             try {
                 
-                DataOutputStream os;
-                DataInputStream is;
-                proxySocket = new ServerSocket (1234);
+                proxySocket = new ServerSocket (6969);
 
                 while(true){
                     Socket client = proxySocket.accept();
-                    is = new DataInputStream (client.getInputStream());
-                    os = new DataOutputStream(client.getOutputStream());
                     
-                    RequestHandler newHandler = new RequestHandler(client, this);
+                    Thread newHandler = new Thread(new RequestHandler(client, this));
                     System.out.println("created new thread");
                     newHandler.run();
                     
-                    //change this
-                    //String line = is.readLine();
-                    //os.writeBytes("Hello\n");
-                    is.close();
-                    os.close();
-                    proxySocket.close();
                     client.close();
                 }
                 

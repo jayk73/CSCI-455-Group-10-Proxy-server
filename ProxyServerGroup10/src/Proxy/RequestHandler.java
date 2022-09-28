@@ -14,9 +14,9 @@ public class RequestHandler extends Thread {
 	
 	Socket clientSocket;
 
-	BufferedReader inFromClient;
+        InputStream inFromClient;
 
-	BufferedWriter outToClient;
+	OutputStream outToClient;
 	
 	byte[] request = new byte[1024];
         
@@ -36,8 +36,8 @@ public class RequestHandler extends Thread {
 
 		try {
 			clientSocket.setSoTimeout(2000);
-			inFromClient = new BufferedReader(new InputStreamReader (clientSocket.getInputStream()));
-			outToClient = new BufferedWriter( new OutputStreamWriter (clientSocket.getOutputStream()));
+			inFromClient = clientSocket.getInputStream();
+			outToClient = clientSocket.getOutputStream();
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -63,21 +63,23 @@ public class RequestHandler extends Thread {
                 //Check the request type, only process GET request and ignore others
                 System.out.println("Processing GET");
                 try{
-                    String request = inFromClient.readLine();
-                    System.out.println("request: " + request);
+                    
+                    inFromClient.read(request); 
+                    String requestString = request.toString();
+                    System.out.println("request: " + requestString);
                     
                     //write log Browser IP URL 
-                    server.writeLog(clientSocket.getInetAddress().getHostAddress() + " " + request.substring(4));
+                    server.writeLog(clientSocket.getInetAddress().getHostAddress() + " " + requestString.substring(4));
 
                     //if cahced respond with chached content
-                    if(server.getCache(request)!=null){
+                    if(server.getCache(requestString)!=null){
                         System.out.println("sending cached content to client");
-                        sendCachedInfoToClient(server.getCache(request));
+                        sendCachedInfoToClient(server.getCache(requestString));
                     }
                     else{
                         //if not call proxyServerToClient to process GET request
                         //might have to change the request var
-                        proxyServertoClient(request.getBytes());
+                        proxyServertoClient(request);
                         }
                     
                     }
@@ -112,22 +114,20 @@ public class RequestHandler extends Thread {
 		try{
                     //send client request use clientRequest
                     Socket toWebServerSocket = new Socket(clientRequest.toString(), 80);
-                                  
-                    PrintStream out = new PrintStream( toWebServerSocket.getOutputStream());
-                    BufferedReader in = new BufferedReader( new InputStreamReader( toWebServerSocket.getInputStream() ) );
-                    
-                    out.println("GET" + clientRequest.toString() + " HTTP/1.0");
-                    out.println();
-                    
-                    String response = in.readLine();
+                    toWebServerSocket.getOutputStream().write(clientRequest);
                     //loop for response
-                    while(response != null){
-                        response = in.readLine();
+                    byte[] res;
+                    toWebServerSocket.getInputStream().read(clientRequest);
+                    while((res = clientRequest)!= null){
+                        outToClient.write(res);
+                        //System.out.println("stuck");
                     }
+                    outToClient.flush();
+
                     //send to client
                     System.out.println("Sending response to client");
-                    serverReply = response.getBytes();
-                    System.out.println(response);
+                    serverReply = res;
+                    //System.out.println(response);
                     
                     
                     //write response to cache file
@@ -156,7 +156,7 @@ public class RequestHandler extends Thread {
 
 			byte[] bytes = Files.readAllBytes(Paths.get(fileName));
 
-			outToClient.write(bytes.toString());
+			outToClient.write(bytes);
 			outToClient.flush();
 
 		} catch (Exception e) {
