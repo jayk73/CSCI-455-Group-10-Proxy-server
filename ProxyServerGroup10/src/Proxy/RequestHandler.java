@@ -18,6 +18,8 @@ public class RequestHandler extends Thread {
         InputStream inFromClient;
 
 	OutputStream outToClient;
+        
+        BufferedWriter proxyToClient;
 	
 	byte[] request = new byte[1024];
         
@@ -39,6 +41,7 @@ public class RequestHandler extends Thread {
 			clientSocket.setSoTimeout(2000);
 			inFromClient = clientSocket.getInputStream();
 			outToClient = clientSocket.getOutputStream();
+                        proxyToClient = new BufferedWriter(new OutputStreamWriter(clientSocket.getOutputStream()));
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -134,9 +137,10 @@ public class RequestHandler extends Thread {
                     URLString = URLString.substring(4);
                     System.out.println("URL: " + URLString);
                     
+                    URL remoteURL = new URL(URLString);
                     try ( //send client request use clientRequest
-                            Socket toWebServerSocket = new Socket(URLString, 80)) {
-                        System.out.println("Past Socket");
+                            Socket toWebServerSocket = new Socket(remoteURL.getHost(), 80)) {
+                        //System.out.println("Past Socket");
                         
                         OutputStream outToWebServer;
                         InputStream inFromWebServer;
@@ -147,25 +151,37 @@ public class RequestHandler extends Thread {
                         outToWebServer.flush();
                         
                         inFromWebServer = (toWebServerSocket.getInputStream());
+                        
                         BufferedReader reader = new BufferedReader(new InputStreamReader(inFromWebServer));
                         String line;
                         //loop for response
                         //send to client
                         System.out.println("Sending response to client");
-                        while((line = reader.readLine()) != null){
-                            outToClient.write(line.getBytes());
-                        }
-                        outToClient.flush();
+                        
+                        inFromWebServer.transferTo(outToClient);
+                        outToClient.write(serverReply);
+//                        while((line = reader.readLine()) != null){
+//                            proxyToClient.write(line);
+//                            //System.out.println("stuck");
+//                            System.out.println(line);
+//                        }
+                        //System.out.println(line);
+                        proxyToClient.flush();
                         
                         //write response to cache file
-                        
+                        File newCacheFile = new File(fileName);
                         writer = new FileWriter(fileName);
                         bw = new BufferedWriter(writer);
+                        System.out.println("writing to cache");
+                        bw.write(serverReply.toString());
                         server.putCache(URLString, fileName);
                         //close file/socket
                         writer.close();
                         outToWebServer.close();
                         inFromWebServer.close();
+                        bw.close();
+                        //close file
+                        //newCacheFile.close();
                     }
                     
                     
