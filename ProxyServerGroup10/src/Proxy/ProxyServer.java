@@ -58,6 +58,7 @@ public class ProxyServer {
                 System.out.println("starting server");
             try {
                 
+
                 proxySocket = new ServerSocket (6969);
 
                 while(true){
@@ -66,7 +67,6 @@ public class ProxyServer {
                     Thread newHandler = new Thread(new RequestHandler(client, this));
                     System.out.println("created new thread");
                     newHandler.run();
-                    
                     
                     client.close();
                 }

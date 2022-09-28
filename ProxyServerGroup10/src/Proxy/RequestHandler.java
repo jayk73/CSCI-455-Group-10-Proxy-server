@@ -71,13 +71,18 @@ public class RequestHandler extends Thread {
 //                    }
                     
                     String requestString = new String(request, StandardCharsets.UTF_8);
-                    String[] URL = requestString.split(" HTTP");
+                    String[] URL = requestString.split("\n");
                     requestString = URL[0];
+                    
+                    String URLString = new String(request, StandardCharsets.UTF_8);
+                    String[] log = URLString.split(" HTTP/1.1");
+                    URLString = log[0];
+                    URLString = URLString.substring(4);
                     
                     System.out.println("request: " + requestString);
                     
                     //write log Browser IP URL 
-                    server.writeLog(clientSocket.getInetAddress().getHostAddress() + " " + requestString.substring(4));
+                    server.writeLog(clientSocket.getInetAddress().getHostAddress() + " " + URLString);
 
                     //if cahced respond with chached content
                     if(server.getCache(requestString.substring(4))!=null){
@@ -121,39 +126,47 @@ public class RequestHandler extends Thread {
                 System.out.println("Sending request to webserver");
 		try{
                     
-                    //send client request use clientRequest
-                    String requestString = new String(clientRequest, StandardCharsets.UTF_8);
-                    String[] URL = requestString.split(" HTTP");
-                    requestString = URL[0];
-                    System.out.println("URL: " + requestString.substring(4));
                     
-                    Socket toWebServerSocket = new Socket(requestString.substring(4), 80);
-                    System.out.println("Past Socket");
-                    toWebServerSocket.getOutputStream().write(clientRequest);
-                    //loop for response
-                    byte[] res;
-                    //toWebServerSocket.getInputStream().read(clientRequest);
-                    while((res = clientRequest)!= null){
-                        outToClient.write(res);
-                        //System.out.println("stuck");
+                    //seperate URL from request
+                    String URLString = new String(clientRequest, StandardCharsets.UTF_8);
+                    String[] URL = URLString.split(" HTTP");
+                    URLString = URL[0];
+                    URLString = URLString.substring(4);
+                    System.out.println("URL: " + URLString);
+                    
+                    try ( //send client request use clientRequest
+                            Socket toWebServerSocket = new Socket(URLString, 80)) {
+                        System.out.println("Past Socket");
+                        
+                        OutputStream outToWebServer;
+                        InputStream inFromWebServer;
+                        
+                        
+                        outToWebServer = (toWebServerSocket.getOutputStream());
+                        outToWebServer.write(clientRequest);
+                        outToWebServer.flush();
+                        
+                        inFromWebServer = (toWebServerSocket.getInputStream());
+                        BufferedReader reader = new BufferedReader(new InputStreamReader(inFromWebServer));
+                        String line;
+                        //loop for response
+                        //send to client
+                        System.out.println("Sending response to client");
+                        while((line = reader.readLine()) != null){
+                            outToClient.write(line.getBytes());
+                        }
+                        outToClient.flush();
+                        
+                        //write response to cache file
+                        
+                        writer = new FileWriter(fileName);
+                        bw = new BufferedWriter(writer);
+                        server.putCache(URLString, fileName);
+                        //close file/socket
+                        writer.close();
+                        outToWebServer.close();
+                        inFromWebServer.close();
                     }
-                    outToClient.flush();
-
-                    //send to client
-                    System.out.println("Sending response to client");
-                    serverReply = res;
-                    //System.out.println(response);
-                    
-                    
-                    //write response to cache file
-                    
-                    writer = new FileWriter(fileName);
-                    bw = new BufferedWriter(writer);
-                    server.putCache(clientRequest.toString(), fileName);
-                    //close file/socket
-                    toWebServerSocket.close();
-                    writer.close();
-                    
                     
                     
                 } catch(IOException ex){
